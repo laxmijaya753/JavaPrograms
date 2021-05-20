@@ -1,6 +1,6 @@
 package com.qa.inheitanceexe;
 
-public class Car {
+public class Car  extends Vehicle{
 	   //Attributes
 	private int numberofwheels;
 	private String enginetype;
@@ -18,12 +18,16 @@ public class Car {
 		this.enginetype = enginetype;
 	}
 	 //Constructor
-	public Car(int numberofwheels, String enginetype) {
-		super();
+	
+	public Car(String name, int number, String type, String color, int numberofwheels, String enginetype) {
+		super(name, number, type, color);
 		this.numberofwheels = numberofwheels;
 		this.enginetype = enginetype;
+	}
+	
+	
 	}
 
 	
 
-}
+
