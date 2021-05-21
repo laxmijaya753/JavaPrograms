@@ -26,14 +26,15 @@ public class MotorCycle extends Vehicle{
 		this.sittingcapacity = sittingcapacity;
 	}
 	 //Constructor
-	public MotorCycle(String name, int number, String type, String color, int numberofwheels, String enginetype,
+	public MotorCycle(int numberofwheels, String enginetype,
 			int sittingcapacity) {
-		super(name, number, type, color);
+		super();
 		this.numberofwheels = numberofwheels;
 		this.enginetype = enginetype;
 		this.sittingcapacity = sittingcapacity;
 	}
 	
+
 	
 
 }

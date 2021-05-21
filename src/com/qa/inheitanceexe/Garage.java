@@ -13,50 +13,72 @@ import java.util.*;
  remove Vehicle(s) (By ID, By Vehicle Type)
   fix Vehicle (Calculate bill) and empty the garage*/
 public class Garage   {
+	//Attributes
 	
-	//List<String> peronalGarage = new ArrayList<String>();
-  //  Garage parkingLot = new Garage();
-    
-    
+	private String garagename;
 	
-	//List<Vehicle> list=new ArrayList<Vehicle>();
+	public String getGaragename() {
+		return garagename;
+	}
+
+
+	public void setGaragename(String garagename) {
+		this.garagename = garagename;
+	}
+
+	List<Object> garageList = new ArrayList<Object>();
+	
 
 	
-	public Garage()
+	
+	//Constructor
+	public Garage(String garagename)
 	{
+		this.garagename=garagename;
 		
 	}
 		
 	
-	
-	public void addVehicle(Vehicle v) {
-		
-		System.out.println("Vehicle Name:"+v.getName());
-	System.out.println("Vehicle Type:"+v.getType());
-		System.out.println("Vehicle Color:"+v.getColor());
-		System.out.println("Vehicle Number:"+v.getNumber());
-		
-		
-		
-		
-		
-	
-		
-	}
-	
-	
-	public void  removeVehicle(int number,String type)
-	{
-		
-	}
-	public void fixVehicle ( double Calculatebill)
-	{
-		
-	}
-	
-	
-	
-	
-	
+	//Add Vehicle
 
+	public void addVehicle(Object vehicle) {
+		garageList.add(vehicle);
+	}
+	// Remove Vehicle
+	
+	public void  removeVehicle(Object vehicle)
+	{
+		
+	for(int i = 0; i < garageList.size(); i++) {
+		if (garageList.get(i).equals(vehicle)) {
+			garageList.remove(i);
+			}
+		}	
+		
+	}
+	public void fixVehicle ( )
+	{
+		
+	int totalBill = 0;
+ for(int i = 0; i < garageList.size(); i++) {
+	Vehicle e = (Vehicle)  garageList.get(i);
+	int bill = e.calculateBill();
+	String result = "Vehicle Name: " + e. getName() + " "  + " Repair bill is: " + e.calculateBill();
+		totalBill += bill;
+		System.out.println(result );
+	}
+System.out.println("Total Bill for all vehicles: $" + totalBill);
 }
+	
+	public void  emptyGarage() {
+		garageList.clear();
+	}
+	
+	}
+	
+	
+	
+	
+	
+
+

@@ -6,25 +6,27 @@ public class Main {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		List<Vehicle> list = new ArrayList<Vehicle>();
-		Garage g=new Garage();
-		Vehicle v=new Vehicle("Mazda",1,"2wheeler","Black");
-		g.addVehicle(v);
+		Garage g=new Garage("Mygarage");
+		
+		Vehicle car=new Car(4,"Hyundai");
+		Vehicle motorCycle=new MotorCycle(4,"Twostroke",2);
+		
+		g.addVehicle(car);
+		g.addVehicle(motorCycle);
+		//myGarage1.deleteVehicle(motorcycle1);
+		// g.emptyGarage();
+		 g.fixVehicle();
+		
+		 
+		 
+		 
+				
 		
 		
 		
 		
 		
-	// Car Mazda = new Car(4, "VEE" );
-    /*List<Vehical> peronalGarage = new ArrayList<Vehical>();
-    Garage parkingLot = new Garage(peronalGarage);
-    parkingLot.addLocomotive(Mazda);
-	System.out.println("printing list:");
-	parkingLot.printList();
-	parkingLot.removeLocomotive(Mazda);
-	parkingLot.printList();
-	parkingLot.removeLocomotive(Mazda);
-	parkingLot.printList();*/
+	
 			
 
 	}

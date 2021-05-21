@@ -19,14 +19,21 @@ public class Car  extends Vehicle{
 	}
 	 //Constructor
 	
-	public Car(String name, int number, String type, String color, int numberofwheels, String enginetype) {
-		super(name, number, type, color);
-		this.numberofwheels = numberofwheels;
-		this.enginetype = enginetype;
+	public Car(int numberofwheels,String enginetype)
+	{
+		super();
+		this.numberofwheels=numberofwheels;
+		this.enginetype=enginetype;
+		
+		
 	}
 	
-	
+	public Car(String name) {
+		super(name);
+		
+		
 	}
+}
 
 	
 
